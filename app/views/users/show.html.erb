@@ -8,3 +8,7 @@
 <% end %>
 
 <img src= "<%=@user.profile_pic%>">
+
+<p>Username: <%=h @user.username %></p>
+<p><%= link_to "Who to Follow", users_path %></p>
+

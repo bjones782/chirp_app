@@ -3,10 +3,11 @@
 
 Chirp by: <%= @chirp.user.username %>
 <br>
-Squwaks: 
+Squwaks: <%= @chirp.squwaks.count %>
 <br>
 Chirp created: <%= @chirp.created_at.strftime("%d %b %Y at %I:%M %p") %>
 <br>
+
 
 
 <%= link_to "Homepage", chirps_path %>
