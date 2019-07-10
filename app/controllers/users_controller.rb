@@ -30,7 +30,7 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:username, :bio, :password, :profile_pic, :password_confirmation)
+        params.require(:user).permit(:username, :bio, :password, :profile_pic, :password_confirmation, :follower_id)
         #need to add authenticate above?
     end
 

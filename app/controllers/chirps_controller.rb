@@ -3,8 +3,9 @@ class ChirpsController < ApplicationController
     # before_action :require_login
 
     def index
-        @chirps = Chirp.all.order("created_at DESC")
+        @chirps = Chirp.all
         @chirp = Chirp.new
+        @users = User.all
     end 
     
     def new
@@ -33,7 +34,7 @@ class ChirpsController < ApplicationController
     private
 
     def chirp_params
-        params.require(:chirp).permit(:user_id, :content)
+        params.require(:chirp).permit(:user_id, :content, :chirp_id, :squwaks)
     end
 
 end
