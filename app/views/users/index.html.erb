@@ -1,0 +1,17 @@
+<h1>All Chirp Users</h1>
+
+<ul>
+
+<% @users.each do |user| %>
+<li> <%=link_to user.username, user_path(user)%></li>
+<p><%= user.username %></p>
+<%= user.chirps.each do |chirp| %>
+<p><%= chirp.content %></p>
+<% end %>
+<% end %>
+
+
+
+
+
+ 

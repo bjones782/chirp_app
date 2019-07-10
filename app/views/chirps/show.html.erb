@@ -1,0 +1,15 @@
+<h1>Profile Page for my chirp:</h1>
+<h2><%= @chirp.content %></h2>
+
+Chirp by: <%= @chirp.user.username %>
+<br>
+Squwaks: 
+<br>
+Chirp created: <%= @chirp.created_at.strftime("%d %b %Y at %I:%M %p") %>
+<br>
+
+
+<%= link_to "Homepage", chirps_path %>
+
+
+

@@ -1,0 +1,10 @@
+<h1>Profile Page for <%= @user.username %></h1>
+
+<h2><%= link_to "Home", chirps_path(@chirps) %></h2>
+
+<p><%= @user.username %></p>
+<% @user.chirps.reverse.each do |chirp| %>
+<p><%= link_to chirp.content, chirp_path(chirp) %></p>
+<% end %>
+
+<img src= "<%=@user.profile_pic%>">

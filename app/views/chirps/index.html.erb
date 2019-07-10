@@ -1,0 +1,20 @@
+<h1>Chirps!</h1>
+
+<h3>Current User: <%= @chirps.first.user.username %></h3>
+<h3>Create New Chirp: <%= link_to "Write a new Chirp!", new_chirp_path %></h3><br>
+<br>
+
+<ul>
+<% @chirps.reverse.each do |chirp| %>
+<br>
+  <%= image_tag("https://media.giphy.com/media/11ec1pd0tpSFUc/giphy.gif", :alt => "smiley_face_gif") %>
+<strong><%= link_to chirp.user.username, user_path(chirp.user_id) %></strong>
+<%= chirp.created_at.strftime("%m/%d/%Y at %I:%M%p") %>
+<p><%= chirp.content %></p>
+<button class="clicker js-explode">Like</button>&nbsp;&nbsp;<span id="counter"></span>
+
+
+<br><br>
+<% end %>
+
+</ul>
